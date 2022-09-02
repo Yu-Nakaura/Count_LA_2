@@ -60,6 +60,7 @@ class ThirdFragment : Fragment() {
             }
     }
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val finish = view.findViewById<Button>(R.id.finish_button)
@@ -67,5 +68,6 @@ class ThirdFragment : Fragment() {
             Log.d("log", "finish button was pressed!")
             activity?.finish()
         }
+
     }
 }

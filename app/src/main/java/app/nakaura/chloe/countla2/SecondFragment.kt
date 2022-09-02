@@ -59,7 +59,7 @@ class SecondFragment : Fragment() {
             }
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+   /* override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val toThirdText = view.findViewById<TextView>(R.id.TextView2)
         toThirdText.setOnClickListener{
@@ -70,5 +70,5 @@ class SecondFragment : Fragment() {
             fragmentTransaction?.replace(R.id.fragmentContainer, thirdFragment)
             fragmentTransaction?.commit()
         }
-    }
+    }*/
 }
