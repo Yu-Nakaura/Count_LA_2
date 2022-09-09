@@ -60,12 +60,27 @@ class ThirdFragment : Fragment() {
             }
     }
 
-
+    // Doggy: onViewCreated で View の操作をしているのナイス！！
+    //  Fragment のライフサイクルは Activity よりも複雑で、
+    //  ・onCreateView: レイアウトファイルを Fragment 内で使用できるようにする
+    //  ・onViewCreated: View の操作をする（Activity の onCreate で行うような処理を書く）
+    //  といった使い分けをします！
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        // Doggy: findViewById は使わずに View Binding を使おう！
+        //  View Binding についてのドキュメントを読んでみよう！
+        //  https://developer.android.com/topic/libraries/view-binding?hl=ja#findviewbyid
+
+        // Doggy: finish という変数名は Button であることが伝わらないので、
+        //  finidhButton のような名前がより良さそう！
         val finish = view.findViewById<Button>(R.id.finish_button)
         finish.setOnClickListener{
+            // Doggy: ログを表示しているのナイス！！
             Log.d("log", "finish button was pressed!")
+            // Doggy: 以下のような書き方もあるよ！
+            //  requireActivity().finish()
+            //  activity? と requireActivity の違いを調べてみよう！
             activity?.finish()
         }
 
