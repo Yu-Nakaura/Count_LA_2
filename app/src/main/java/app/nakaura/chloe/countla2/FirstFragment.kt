@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 
+//reviewed by toppo 🧸: Fragmentを作成した時に自動生成されるコードの不要な部分を削除しよう！
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
@@ -59,6 +60,7 @@ class FirstFragment : Fragment() {
             }
     }
 
+    //🧸: 不要なコードは削除しよう！動きのチェックなどLogを活用できていてGood
     /*override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val toSecondText = view.findViewById<TextView>(R.id.TextView1)
