@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 
+//reviewed by toppo 🧸: Fragmentを作成した時に自動生成されるコードの不要な部分を削除しよう！
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
@@ -61,8 +62,10 @@ class ThirdFragment : Fragment() {
     }
 
 
+    //🧸: onViewCreatedというライフサイクルで実装できていてGood！ナイス！
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        //🧸: findViewByIdではなくviewBindingを使おう！
         val finish = view.findViewById<Button>(R.id.finish_button)
         finish.setOnClickListener{
             Log.d("log", "finish button was pressed!")
